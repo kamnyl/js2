@@ -1,4 +1,4 @@
-let userInput = prompt("Enter the product price:");
+// let userInput = prompt("Enter the product price:");
 
 let price = parseFloat(userInput.replace("$",""));
 
