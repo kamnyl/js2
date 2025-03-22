@@ -15,10 +15,16 @@ function calculateFunction() {
     
     let price = parseFloat(userInput.replace("$",""));
 
+    if (isNaN(price) || price <= 0) {
+        document.getElementById("new-price").innerHTML = "Invalid input. Please enter a valid price (for example, $10.99).";
+        document.getElementById("discount-amount").innerHTML = "";
+        
+    } else {
         let discount = price * 0.9; 
         let discountAmount = price * 0.1;
         
         document.getElementById("new-price").innerHTML = `Your new price is $${discount.toFixed(2)}`;
         document.getElementById("discount-amount").innerHTML = `You will save $${discountAmount.toFixed(2)}`; 
 
+}
 }
