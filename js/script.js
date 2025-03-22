@@ -13,7 +13,7 @@
 function calculateFunction() {
     let userInput = prompt ("Enter the product price:");
     
-    let price = parseFloat(userInput.replace("$",""));
+    let price = parseFloat(userInput.replace("$","").replace(",", "."));
 
     if (isNaN(price) || price <= 0) {
         document.getElementById("new-price").innerHTML = "Invalid input. Please enter a valid price (for example, $10.99).";
